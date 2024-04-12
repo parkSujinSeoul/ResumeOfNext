@@ -1,8 +1,9 @@
 'use client';
 import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 export default function Home() {
-  const router = useRouter();
+  const [path, setPath] = useState('/');
   return (
     <nav>
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -14,11 +15,15 @@ export default function Home() {
                   href="/"
                   className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
                   aria-current="page"
+                  role={'button'}
+                  onClick={() => setPath('/')}
                 >
                   기본정보
                 </a>
                 <a
                   href="/resume/basicInfo"
+                  role={'button'}
+                  onClick={() => setPath('/resume/basicInfo')}
                   className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   자기소개
@@ -50,6 +55,8 @@ export default function Home() {
         <div className="space-y-1 px-2 pb-3 pt-2">
           <a
             href="/"
+            role={'button'}
+            onClick={() => setPath('/')}
             className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
             aria-current="page"
           >
@@ -57,6 +64,8 @@ export default function Home() {
           </a>
           <a
             href="/resume/basicInfo"
+            role={'button'}
+            onClick={() => setPath('/resume/basicInfo')}
             className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
           >
             자기소개
