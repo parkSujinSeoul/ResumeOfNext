@@ -1,11 +1,11 @@
 type LayoutProps = {
-    children: React.ReactNode;
+  children: React.ReactNode;
 };
-export default function Layout (props: LayoutProps){
+export default function Layout(props: LayoutProps) {
   return (
-      <form>
-          <h2>Read</h2>
-          {props.children}
-      </form>
+    <form>
+      <h2>Read</h2>
+      {props.children}
+    </form>
   );
 }
