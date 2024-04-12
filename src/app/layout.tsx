@@ -1,4 +1,5 @@
-import LNB from '@/container/LNB'
+import LNB from '@/container/navigator/LNB';
+import './globals.css';
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -7,7 +8,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-      <LNB/>
+        <LNB />
         {children}
       </body>
     </html>
