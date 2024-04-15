@@ -1,5 +1,5 @@
 import LNB from '@/container/navigator/LNB';
-import '@/style/globals.css';
+import '@/styles/globals.css';
 export default function RootLayout({
   children,
 }: Readonly<{
