@@ -14,13 +14,11 @@ export default function Home() {
                 href={RoutesInfos.BASIC_INFO.path}
                 className={`${currentPage === RoutesInfos.BASIC_INFO.path ? 'bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium' : 'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium'}`}
                 aria-current="page"
-                role={'button'}
               >
                 기본정보
               </Link>
               <Link
                 href={RoutesInfos.SELF_INTRODUCTION.path}
-                role={'button'}
                 className={`${currentPage === RoutesInfos.SELF_INTRODUCTION.path ? 'bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium' : 'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium'}`}
               >
                 자기소개

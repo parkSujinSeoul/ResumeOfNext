@@ -2,10 +2,9 @@ import { setFetchOptions } from './fetchOptions';
 import { ReceiveFetchType } from '@/types/fetch';
 /**
  * 자기소개 내용을 조회합니다.
- * @param {string} postId
  * @returns {ReceiveFetchType | boolean} commentsData or false
  */
-export const getSelfIntroduction = async (postId: string) => {
+export const getSelfIntroduction = async () => {
   const url = `/self-introduction`;
   const options = setFetchOptions('GET');
 
