@@ -1,5 +1,5 @@
 'use client';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { useState } from 'react';
 
 export default function Home() {
@@ -11,23 +11,23 @@ export default function Home() {
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
-                <a
+                <Link
                   href="/"
                   className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
                   aria-current="page"
                   role={'button'}
                   onClick={() => setPath('/')}
                 >
-                  기본정보
-                </a>
-                <a
+                  기본정보 {path}
+                </Link>
+                <Link
                   href="/resume/basicInfo"
                   role={'button'}
                   onClick={() => setPath('/resume/basicInfo')}
                   className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   자기소개
-                </a>
+                </Link>
               </div>
             </div>
           </div>
