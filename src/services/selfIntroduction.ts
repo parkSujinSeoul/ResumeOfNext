@@ -3,7 +3,7 @@ import { ReceiveFetchType } from '@/types/fetch';
 /**
  * 자기소개 내용을 조회합니다.
  * @param {string} postId
- * @returns {CommentInterface | boolean} commentsData or false
+ * @returns {ReceiveFetchType | boolean} commentsData or false
  */
 export const getSelfIntroduction = async (postId: string) => {
   const url = `/self-introduction`;

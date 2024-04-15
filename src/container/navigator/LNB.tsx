@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { RoutesInfos } from '@/types/router/routerInfo';
 export default function Home() {
   const currentPage = usePathname();
   return (
@@ -10,17 +11,17 @@ export default function Home() {
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex space-x-4">
               <Link
-                href="/"
-                className={`${currentPage === '/' ? 'bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium' : 'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium'}`}
+                href={RoutesInfos.BASIC_INFO.path}
+                className={`${currentPage === RoutesInfos.BASIC_INFO.path ? 'bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium' : 'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium'}`}
                 aria-current="page"
                 role={'button'}
               >
                 기본정보
               </Link>
               <Link
-                href="/resume/self-introduction"
+                href={RoutesInfos.SELF_INTRODUCTION.path}
                 role={'button'}
-                className={`${currentPage === '/resume/self-introduction' ? 'bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium' : 'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium'}`}
+                className={`${currentPage === RoutesInfos.SELF_INTRODUCTION.path ? 'bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium' : 'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium'}`}
               >
                 자기소개
               </Link>
