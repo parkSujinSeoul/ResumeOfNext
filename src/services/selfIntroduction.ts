@@ -5,11 +5,11 @@ import { ReceiveFetchType } from '@/types/fetch';
  * @returns {ReceiveFetchType | boolean} commentsData or false
  */
 export const getSelfIntroduction = async () => {
-  const url = `/self-introduction`;
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/self-introduction`;
   const options = setFetchOptions('GET');
 
   // 요청 결과 반환
   const res = await fetch(url, options);
-  const data: ReceiveFetchType<string> = await res.json(); // 댓글 리스트
+  const data: ReceiveFetchType<string> = await res.json();
   return res.ok ? data : false;
 };
