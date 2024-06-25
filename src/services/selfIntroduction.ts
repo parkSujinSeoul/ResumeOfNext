@@ -1,11 +1,11 @@
 import { setFetchOptions } from './fetchOptions';
-import { ReceiveFetchType } from '@/types/fetch';
+import { ReceiveFetchType } from '@/types/fetch/response';
 /**
  * 자기소개 내용을 조회합니다.
  * @returns {ReceiveFetchType | boolean} commentsData or false
  */
 export const getSelfIntroduction = async () => {
-  const url = `${process.env.NEXT_PUBLIC_API_URL}/self-introduction`;
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/resume/introduce?id=${1}`;
   const options = setFetchOptions('GET');
 
   // 요청 결과 반환

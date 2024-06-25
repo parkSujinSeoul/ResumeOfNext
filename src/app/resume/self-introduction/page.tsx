@@ -1,20 +1,16 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { getSelfIntroduction } from '@/services/selfIntroduction';
+import { resume } from '@/types/fetch/resume';
 export default function SelfIntroduction() {
   const [introduce, setIntroduce] = useState('');
-  const introduction = () => {
-    // getSelfIntroduction().then((res) => {
-    //   if (res) {
-    //     setIntroduce(() => res.data as string);
-    //   }
-    // });
-  };
   const fetchFAQs = async () => {
-    const res = await fetch('/api/introduction');
-    const { faqsList } = await res.json();
-    console.log(faqsList, 'TTTTTTTT');
-    setIntroduce(faqsList);
+    const res: Response = await fetch('/api/introduction');
+    const data = await res.json();
+
+    const resume = data.response?.data as resume;
+    setIntroduce(resume?.introduceMyself);
+
+    console.log(introduce);
   };
 
   useEffect(() => {
