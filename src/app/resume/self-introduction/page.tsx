@@ -3,18 +3,11 @@ import React, { useEffect, useState } from 'react';
 import { getSelfIntroduction } from '@/services/selfIntroduction';
 export default function SelfIntroduction() {
   const [introduce, setIntroduce] = useState('');
-  const introduction = () => {
-    // getSelfIntroduction().then((res) => {
-    //   if (res) {
-    //     setIntroduce(() => res.data as string);
-    //   }
-    // });
-  };
   const fetchFAQs = async () => {
-    const res = await fetch('/api/introduction');
-    const { faqsList } = await res.json();
-    console.log(faqsList, 'TTTTTTTT');
-    setIntroduce(faqsList);
+    const res = await fetch('/api/introduction', {method: 'GET'});
+
+    console.log(res, 'TTTTTTTT');
+
   };
 
   useEffect(() => {
