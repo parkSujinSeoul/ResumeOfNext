@@ -13,3 +13,13 @@ export const getSelfIntroduction = async () => {
   const data: ReceiveFetchType<string> = await res.json();
   return res.ok ? data : false;
 };
+
+export const saveSelfIntroduction = async (introduce: String) => {
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/save/introduce`;
+  const options = setFetchOptions('POST', introduce);
+
+  // 요청 결과 반환
+  const res = await fetch(url, options);
+  const data: ReceiveFetchType<string> = await res.json();
+  return res.ok ? data : false;
+};
