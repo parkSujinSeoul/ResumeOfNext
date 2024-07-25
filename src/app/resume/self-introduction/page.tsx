@@ -19,7 +19,11 @@ export default function SelfIntroduction() {
     setIntroduce(e.target.value);
   };
   const saveIntroduction = async () => {
-    await fetch('/api/introduction', { method: 'POST' });
+    await fetch('/api/introduction', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ introduce: introduce }),
+    });
   };
   return (
     <>

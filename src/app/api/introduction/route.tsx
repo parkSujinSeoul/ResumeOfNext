@@ -9,7 +9,8 @@ export async function GET() {
   return NextResponse.json({ response: res });
 }
 
-export async function POST(introduce: String) {
-  const res = await saveSelfIntroduction(introduce);
+export async function POST(request: Request) {
+  const received = await request.json();
+  const res = await saveSelfIntroduction(received.introduce);
   return NextResponse.json({ response: res });
 }
