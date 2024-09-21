@@ -5,6 +5,6 @@ export interface RoutesInfo {
 }
 
 export const RoutesInfos: RoutesInfo = {
-  BASIC_INFO: new RouterType('/', '기본정보'),
+  BASIC_INFO: new RouterType('/resume', '기본정보'),
   SELF_INTRODUCTION: new RouterType('/resume/self-introduction', '자기소개'),
 };

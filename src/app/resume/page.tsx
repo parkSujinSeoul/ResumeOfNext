@@ -1,13 +1,8 @@
-'use client';
-import { goToMain } from '@/services/utils';
-
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between p-24">
+      <h1 className="text-3xl font-bold underline left-10">Hello world!</h1>
       <div>main</div>
-      <form action={goToMain}>
-        <button>Submit</button>
-      </form>
     </main>
   );
 }

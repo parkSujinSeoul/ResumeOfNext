@@ -1,5 +1,5 @@
+import LNB from '@/container/navigator/LNB';
 import '@/styles/globals.css';
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -8,8 +8,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <LNB />
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 bg-gray-100 rounded-md min-h-screen">
-          <h1>로그인</h1>
           {children}
         </div>
       </body>
